@@ -1,0 +1,133 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  text-align: right;
+  min-height: 120px;
+}
+
+/* Mueve la imagen a la izquierda */
+header img { float: left; }
+
+#logo {
+  width: 100px
+}
+header nav {
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  float: right;
+  display: flex;
+}
+header nav .link {
+  background-color: #007aff;
+  padding: 5px;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-family: arial;
+  border-right: 2px solid black;
+}
+header nav .link:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+header nav .link:last-child {
+  border-right: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;  
+}
+header nav .link:hover {
+  background-color: #0054b1;
+}
+
+section {
+  text-align: center;
+}
+section img {
+  width: 50%
+}
+section p {
+  text-align: justify;
+}
+section p span {
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.calcetas {
+  display: flex;
+  justify-content: space-between;
+}
+.calcetas img:first-child {
+  width: 300px;
+}
+.calcetas img:last-child {
+  width: 250px;
+}
+
+/* CSS phones */
+@media only screen and (max-width: 600px) {
+  body {
+    background: green;
+  }
+  /* aqui le decimos que las imagenes salten hacia abajo
+  cuando  no hay sufiente espacio */
+  .calcetas {
+    flex-direction: column;
+    align-items: center;
+  }
+  header img {
+    float: none;
+  }
+  header nav {
+    float: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  section img {
+    width: 90%;
+  }
+  section p {
+    font-size: 25px;
+    color: cadetblue;
+  }
+  section span {
+    font-size: 29px;
+  }
+}
+/* CSS tablets */
+@media only screen and (min-width: 600px) {
+  body {
+    background: lightpink;
+  }
+  section p {
+    font-size: 20px;
+    color: gray;
+  }
+}
+/* CSS laptops */
+@media only screen and (min-width: 992px) {
+  body {
+    background: skyblue
+  }
+  section p {
+    font-size: 15px;
+    color:blanchedalmond;
+  }
+  /* las imagenes deben ir alineadas horizontalmente */
+}
